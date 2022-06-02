@@ -1,8 +1,8 @@
-function main(args) {
-    let name = args.name || 'stranger'
-    let greeting = 'Hello ' + name + '!'
-    console.log(greeting)
-    return {"body": greeting}
-  }
+const axios = require("axios");
 
-exports.main = main
+async function main() {
+  const sharks = axios.get("https://functionschallenge.com/api/sammy");
+  return { sharks };
+}
+
+exports.main = main;
