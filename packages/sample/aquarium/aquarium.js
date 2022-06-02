@@ -1,7 +1,8 @@
-async function main(args) {
-  const res = fetch("https://functionschallenge.com/api/sammy");
-  const data = await res.json();
-  return { sharks: data };
+const axios = require("axios");
+
+async function main() {
+  const sharks = axios.get("https://functionschallenge.com/api/sammy");
+  return { sharks };
 }
 
 exports.main = main;
